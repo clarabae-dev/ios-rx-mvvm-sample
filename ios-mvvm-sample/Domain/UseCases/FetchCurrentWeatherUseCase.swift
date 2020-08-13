@@ -11,3 +11,18 @@ import Foundation
 protocol FetchCurrentWeatherUseCase {
     func execute()
 }
+
+final class DefaultFetchCurrentWeatherUseCase: FetchCurrentWeatherUseCase {
+    
+    private let weatherRepository: WeatherRepository
+    
+    init(weatherRepository: WeatherRepository) {
+        self.weatherRepository = weatherRepository
+    }
+    
+    func execute() {
+        weatherRepository.fetchCurrentWeather()
+    }
+    
+    
+}
