@@ -22,6 +22,7 @@
 		47990D4724E53C7F00D6953B /* WeatherDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47990D4624E53C7F00D6953B /* WeatherDataSource.swift */; };
 		47990D4B24E53CD500D6953B /* LocalWeatherDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47990D4A24E53CD500D6953B /* LocalWeatherDataSource.swift */; };
 		47990D4D24E53FF400D6953B /* RemoteWeatherDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47990D4C24E53FF400D6953B /* RemoteWeatherDataSource.swift */; };
+		47B9535224ED47850054F4ED /* DtoMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B9535124ED47850054F4ED /* DtoMapping.swift */; };
 		66D044A171696F57C49C0D70 /* Pods_ios_mvvm_sample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC5E27584E7B3D6D617940A0 /* Pods_ios_mvvm_sample.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		47990D4624E53C7F00D6953B /* WeatherDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataSource.swift; sourceTree = "<group>"; };
 		47990D4A24E53CD500D6953B /* LocalWeatherDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalWeatherDataSource.swift; sourceTree = "<group>"; };
 		47990D4C24E53FF400D6953B /* RemoteWeatherDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteWeatherDataSource.swift; sourceTree = "<group>"; };
+		47B9535124ED47850054F4ED /* DtoMapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DtoMapping.swift; sourceTree = "<group>"; };
 		9AF9FD9855FDB45754015797 /* Pods-ios-mvvm-sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-mvvm-sample.release.xcconfig"; path = "Target Support Files/Pods-ios-mvvm-sample/Pods-ios-mvvm-sample.release.xcconfig"; sourceTree = "<group>"; };
 		CC5E27584E7B3D6D617940A0 /* Pods_ios_mvvm_sample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_mvvm_sample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2862B54B77213B2E3B3CD38 /* Pods-ios-mvvm-sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-mvvm-sample.debug.xcconfig"; path = "Target Support Files/Pods-ios-mvvm-sample/Pods-ios-mvvm-sample.debug.xcconfig"; sourceTree = "<group>"; };
@@ -81,6 +83,8 @@
 		47212D8624E3D3910069542F /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				47B9534F24ED20330054F4ED /* View */,
+				47B9534E24ED200F0054F4ED /* ViewModel */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -88,6 +92,7 @@
 		47212D8724E3D3990069542F /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				47B9535024ED470F0054F4ED /* Mapping */,
 				47990D4224E53A6A00D6953B /* Repositories */,
 				47990D4324E53A7400D6953B /* DataSources */,
 				47212D9124E3EDC20069542F /* EndPoint.swift */,
@@ -211,6 +216,28 @@
 				47990D4C24E53FF400D6953B /* RemoteWeatherDataSource.swift */,
 			);
 			path = Remote;
+			sourceTree = "<group>";
+		};
+		47B9534E24ED200F0054F4ED /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		47B9534F24ED20330054F4ED /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		47B9535024ED470F0054F4ED /* Mapping */ = {
+			isa = PBXGroup;
+			children = (
+				47B9535124ED47850054F4ED /* DtoMapping.swift */,
+			);
+			path = Mapping;
 			sourceTree = "<group>";
 		};
 		A78560C1B123A1F15D9E87AB /* Pods */ = {
@@ -344,6 +371,7 @@
 				47990D4724E53C7F00D6953B /* WeatherDataSource.swift in Sources */,
 				47212D8E24E3DF7E0069542F /* Weather.swift in Sources */,
 				47483E2F24DBFB5500A60789 /* ViewController.swift in Sources */,
+				47B9535224ED47850054F4ED /* DtoMapping.swift in Sources */,
 				47483E2B24DBFB5500A60789 /* AppDelegate.swift in Sources */,
 				47212D9024E3EC1E0069542F /* FetchCurrentWeatherUseCase.swift in Sources */,
 				47990D4524E53AA300D6953B /* DefaultWeatherRepository.swift in Sources */,

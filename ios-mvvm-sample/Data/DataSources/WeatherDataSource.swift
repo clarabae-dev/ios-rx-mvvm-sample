@@ -9,5 +9,5 @@
 import Foundation
 
 protocol WeatherDataSource {
-    func fetchCurrentWeather()
+    func fetchCurrentWeather(completion: @escaping (Result<Weather, Error>) -> Void)
 }

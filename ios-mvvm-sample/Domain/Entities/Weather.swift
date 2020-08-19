@@ -20,7 +20,7 @@ struct Weather {
     let icon: String
 }
 
-enum Parameters {
+enum Parameters: String {
     case Thunderstorm
     case Drizzle
     case Rain
@@ -28,6 +28,7 @@ enum Parameters {
     case Clouds
     case Clear
     case Mist, Smoke, Haze, Dust, Fog, Sand, Ash, Squall, Tornado
+    case None
 }
 
 struct Main {
