@@ -18,9 +18,8 @@ final class DefaultWeatherRepository: WeatherRepository {
         self.remoteDataSource = remoteDataSource
     }
     
-    func fetchCurrentWeather() {
-        self.remoteDataSource.fetchCurrentWeather()
+    func fetchCurrentWeather(completion: @escaping (CurrentWeatherResults) -> Void) {
+        self.remoteDataSource.fetchCurrentWeather(completion: completion)
     }
-    
     
 }

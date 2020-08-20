@@ -21,7 +21,16 @@ final class DefaultFetchCurrentWeatherUseCase: FetchCurrentWeatherUseCase {
     }
     
     func execute() {
-        weatherRepository.fetchCurrentWeather()
+        weatherRepository.fetchCurrentWeather { currentWeatherResults in
+            switch currentWeatherResults {
+            case .failure(let reason):
+                //todo 오류 이유 띄워주기
+                print("")
+            case .success(let weather):
+                //todo 날씨 정보 보여주기
+                print("")
+            }
+        }
     }
     
     

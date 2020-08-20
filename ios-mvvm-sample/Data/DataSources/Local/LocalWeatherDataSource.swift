@@ -9,8 +9,8 @@
 import Foundation
 
 struct LocalWeatherDataSource: WeatherDataSource {
-    func fetchCurrentWeather() {
-        
+    func fetchCurrentWeather(completion: @escaping (CurrentWeatherResults) -> Void) {
+        // nothing to do
     }
     
     

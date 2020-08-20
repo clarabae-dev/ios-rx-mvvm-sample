@@ -9,5 +9,10 @@
 import Foundation
 
 protocol WeatherDataSource {
-    func fetchCurrentWeather(completion: @escaping (Result<Weather, Error>) -> Void)
+    func fetchCurrentWeather(completion: @escaping (CurrentWeatherResults) -> Void)
+}
+
+enum CurrentWeatherResults {
+    case success(weather: Weather)
+    case failure(reason: String)
 }
