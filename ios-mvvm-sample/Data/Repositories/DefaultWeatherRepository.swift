@@ -13,9 +13,9 @@ final class DefaultWeatherRepository: WeatherRepository {
     private let localDataSource: LocalWeatherDataSource
     private let remoteDataSource: RemoteWeatherDataSource
     
-    init?(localDataSource: LocalWeatherDataSource, remoteDataSource: RemoteWeatherDataSource) {
-        self.localDataSource = localDataSource
-        self.remoteDataSource = remoteDataSource
+    init() {
+        self.localDataSource = LocalWeatherDataSource()
+        self.remoteDataSource = RemoteWeatherDataSource()
     }
     
     func fetchCurrentWeather(completion: @escaping (CurrentWeatherResults) -> Void) {

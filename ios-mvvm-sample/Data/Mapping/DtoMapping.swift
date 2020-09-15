@@ -16,14 +16,15 @@ struct WeatherDto {
     let icon: String
     
     init(_ json: JSON) {
-        self.id = json["id"].intValue
-        self.main = json["main"].stringValue
-        self.description = json["description"].stringValue
-        self.icon = json["icon"].stringValue
+        let weatherArray = json["weather"].arrayValue
+        self.id = weatherArray[0]["id"].intValue
+        self.main = weatherArray[0]["main"].stringValue
+        self.description = weatherArray[0]["description"].stringValue
+        self.icon = weatherArray[0]["icon"].stringValue
     }
     
     func toDomain() -> Weather {
-        return .init(id: id,
+        return Weather(id: id,
                      main: Parameters(rawValue: main) ?? Parameters.None,
                      description: description,
                      icon: icon)

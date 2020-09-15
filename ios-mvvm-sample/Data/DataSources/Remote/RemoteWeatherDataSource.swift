@@ -13,12 +13,12 @@ import SwiftyJSON
 struct RemoteWeatherDataSource: WeatherDataSource {
     func fetchCurrentWeather(completion: @escaping (CurrentWeatherResults) -> Void) {
         //TODO 사용자 위치 받아오기
-        AF.request(URL.currentWeather(lat: 37.55349721201432, lon: 126.97261276107352))
+        AF.request(URL.currentWeather(lat: 37.55320889269831, lon: 126.97261286658032))
             .responseJSON { response in
                 switch response.result {
                 case .failure(let error):
                     let reason = "code: \(String(describing: error.responseCode))\ndescription: \(String(describing: error.errorDescription))"
-                    print("fetchCurrentWeather error: \(reason)")
+                    debugPrint("fetchCurrentWeather error: \(reason)")
                     completion(CurrentWeatherResults.failure(reason: reason))
                 case .success(let value):
                     let json = JSON(value)

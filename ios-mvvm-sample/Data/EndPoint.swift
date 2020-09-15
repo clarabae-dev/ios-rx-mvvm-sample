@@ -10,7 +10,7 @@ import Foundation
 
 extension URL {
     static func currentWeather(lat: Double, lon: Double) -> URL {// 다른 파일에서 접근가능하도록 static 붙임.
-        makeForEndpoint("&lat=\(lat)&=lon\(lon)")
+        makeForEndpoint("&lat=\(lat)&lon=\(lon)")
     }
 }
 
