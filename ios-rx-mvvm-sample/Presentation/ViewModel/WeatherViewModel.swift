@@ -27,7 +27,6 @@ class WeatherViewModel {
             case .success(let weather):
                 self.currentWeather.onNext("\(weather.description)")
                 self.weatherIcon.onNext("\(weather.icon)")
-                debugPrint("아이콘 \(weather.icon)")
             }
         }
     }

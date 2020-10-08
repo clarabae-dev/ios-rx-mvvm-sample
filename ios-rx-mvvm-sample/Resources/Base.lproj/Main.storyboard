@@ -30,8 +30,8 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paperplane.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="TX7-eS-0U5">
                                 <rect key="frame" x="184.5" y="289.5" width="45" height="44.5"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" secondItem="TX7-eS-0U5" secondAttribute="height" multiplier="1:1" id="R7g-W1-bqR"/>
                                     <constraint firstAttribute="width" constant="45" id="kFX-bh-bgv"/>
-                                    <constraint firstAttribute="height" constant="45" id="yTq-wg-reR"/>
                                 </constraints>
                             </imageView>
                         </subviews>

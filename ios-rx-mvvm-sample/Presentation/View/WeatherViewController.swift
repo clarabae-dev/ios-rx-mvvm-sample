@@ -23,19 +23,21 @@ class WeatherViewController: UIViewController {
         super.viewDidLoad()
         viewModel = WeatherViewModel()
         viewModel.showCurrentWeather()
-        viewModel.currentWeather
-            .distinctUntilChanged()
-            .filter { !$0.isEmpty }
-            .subscribe { weatherState in
-                self.currentWeatherStatus.text = weatherState.element
-            }.disposed(by: disposeBag)
-        viewModel.weatherIcon
-            .distinctUntilChanged()
-            .filter { !$0.isEmpty }
-            .subscribe { icon in
-                Nuke.loadImage(with: URL.loadWeatherIcon(icon: icon.element!), into: self.weatherIcon)
-            }.disposed(by: disposeBag)
         
+        Observable.combineLatest(viewModel.currentWeather.distinctUntilChanged().filter { !$0.isEmpty },
+                                 viewModel.weatherIcon.distinctUntilChanged().filter { !$0.isEmpty })
+            .subscribe(onNext: { weather, icon in
+                self.currentWeatherStatus.text = weather
+                Nuke.loadImage(with: URL.loadWeatherIcon(icon: "\(icon)\(self.getWeatherIconScale())"), into: self.weatherIcon)
+            }).disposed(by: disposeBag)
+        
+    }
+    
+    private func getWeatherIconScale() -> String {
+        switch Int(UIScreen.main.scale) {
+        case 1: return ""
+        default: return "@2x"
+        }
     }
 
 }
