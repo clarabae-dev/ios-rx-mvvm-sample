@@ -7,4 +7,5 @@ Swift + MVVM + Clean Architecture Sample
 Used : Alamofire, SwiftyJson, OpenWeatherMap API
 
 # ios-rx-mvvm-sample
-DispatchQueue 대신 RxSwift 변경
+- DispatchQueue 대신 RxSwift 변경
+- Unit Test 추가
