@@ -18,6 +18,7 @@
 		47483E3224DBFB5500A60789 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47483E3024DBFB5500A60789 /* Main.storyboard */; };
 		47483E3424DBFB5500A60789 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47483E3324DBFB5500A60789 /* Assets.xcassets */; };
 		47483E3724DBFB5500A60789 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47483E3524DBFB5500A60789 /* LaunchScreen.storyboard */; };
+		47786F0C2539C27E00F6B882 /* WeatherUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47786F0B2539C27E00F6B882 /* WeatherUseCaseTest.swift */; };
 		47990D3F24E528F600D6953B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 47990D3E24E528F600D6953B /* Default-568h@2x.png */; };
 		47990D4124E5338600D6953B /* WeatherRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47990D4024E5338600D6953B /* WeatherRepository.swift */; };
 		47990D4524E53AA300D6953B /* DefaultWeatherRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47990D4424E53AA300D6953B /* DefaultWeatherRepository.swift */; };
@@ -26,6 +27,16 @@
 		47990D4D24E53FF400D6953B /* RemoteWeatherDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47990D4C24E53FF400D6953B /* RemoteWeatherDataSource.swift */; };
 		47B9535224ED47850054F4ED /* DtoMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B9535124ED47850054F4ED /* DtoMapping.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		477D7DDA2539A3530062E489 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 47483E1F24DBFB5500A60789 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 47483E2624DBFB5500A60789;
+			remoteInfo = "ios-rx-mvvm-sample";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		4716954124FFA9E700C27C00 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +51,9 @@
 		47483E3324DBFB5500A60789 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47483E3624DBFB5500A60789 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		47483E3824DBFB5500A60789 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47786F0B2539C27E00F6B882 /* WeatherUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherUseCaseTest.swift; sourceTree = "<group>"; };
+		477D7DD52539A3530062E489 /* ios-rx-mvvm-sample-unit-tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-rx-mvvm-sample-unit-tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		477D7DD92539A3530062E489 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47990D3E24E528F600D6953B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		47990D4024E5338600D6953B /* WeatherRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRepository.swift; sourceTree = "<group>"; };
 		47990D4424E53AA300D6953B /* DefaultWeatherRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultWeatherRepository.swift; sourceTree = "<group>"; };
@@ -58,6 +72,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				09785690B449E84187E88D20 /* Pods_ios_rx_mvvm_sample.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		477D7DD22539A3530062E489 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				47483E2924DBFB5500A60789 /* ios-rx-mvvm-sample */,
+				477D7DD62539A3530062E489 /* ios-rx-mvvm-sample-unit-tests */,
 				47483E2824DBFB5500A60789 /* Products */,
 				A78560C1B123A1F15D9E87AB /* Pods */,
 				223FCE534D54172FF6A74163 /* Frameworks */,
@@ -161,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				47483E2724DBFB5500A60789 /* ios-rx-mvvm-sample.app */,
+				477D7DD52539A3530062E489 /* ios-rx-mvvm-sample-unit-tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -175,6 +198,15 @@
 				47212D8924E3D4210069542F /* Resources */,
 			);
 			path = "ios-rx-mvvm-sample";
+			sourceTree = "<group>";
+		};
+		477D7DD62539A3530062E489 /* ios-rx-mvvm-sample-unit-tests */ = {
+			isa = PBXGroup;
+			children = (
+				477D7DD92539A3530062E489 /* Info.plist */,
+				47786F0B2539C27E00F6B882 /* WeatherUseCaseTest.swift */,
+			);
+			path = "ios-rx-mvvm-sample-unit-tests";
 			sourceTree = "<group>";
 		};
 		47990D3D24E5193800D6953B /* Repositories */ = {
@@ -274,18 +306,40 @@
 			productReference = 47483E2724DBFB5500A60789 /* ios-rx-mvvm-sample.app */;
 			productType = "com.apple.product-type.application";
 		};
+		477D7DD42539A3530062E489 /* ios-rx-mvvm-sample-unit-tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 477D7DDE2539A3530062E489 /* Build configuration list for PBXNativeTarget "ios-rx-mvvm-sample-unit-tests" */;
+			buildPhases = (
+				477D7DD12539A3530062E489 /* Sources */,
+				477D7DD22539A3530062E489 /* Frameworks */,
+				477D7DD32539A3530062E489 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				477D7DDB2539A3530062E489 /* PBXTargetDependency */,
+			);
+			name = "ios-rx-mvvm-sample-unit-tests";
+			productName = "ios-rx-mvvm-sample-unit-tests";
+			productReference = 477D7DD52539A3530062E489 /* ios-rx-mvvm-sample-unit-tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		47483E1F24DBFB5500A60789 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1160;
+				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 1160;
 				ORGANIZATIONNAME = seungminbae;
 				TargetAttributes = {
 					47483E2624DBFB5500A60789 = {
 						CreatedOnToolsVersion = 11.6;
+					};
+					477D7DD42539A3530062E489 = {
+						CreatedOnToolsVersion = 12.0.1;
+						TestTargetID = 47483E2624DBFB5500A60789;
 					};
 				};
 			};
@@ -303,6 +357,7 @@
 			projectRoot = "";
 			targets = (
 				47483E2624DBFB5500A60789 /* ios-rx-mvvm-sample */,
+				477D7DD42539A3530062E489 /* ios-rx-mvvm-sample-unit-tests */,
 			);
 		};
 /* End PBXProject section */
@@ -316,6 +371,13 @@
 				47990D3F24E528F600D6953B /* Default-568h@2x.png in Resources */,
 				47483E3424DBFB5500A60789 /* Assets.xcassets in Resources */,
 				47483E3224DBFB5500A60789 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		477D7DD32539A3530062E489 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,7 +446,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		477D7DD12539A3530062E489 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47786F0C2539C27E00F6B882 /* WeatherUseCaseTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		477D7DDB2539A3530062E489 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 47483E2624DBFB5500A60789 /* ios-rx-mvvm-sample */;
+			targetProxy = 477D7DDA2539A3530062E489 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		47483E3024DBFB5500A60789 /* Main.storyboard */ = {
@@ -558,6 +636,50 @@
 			};
 			name = Release;
 		};
+		477D7DDC2539A3530062E489 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 949577ZGT6;
+				INFOPLIST_FILE = "ios-rx-mvvm-sample-unit-tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "seungminbae.ios-rx-mvvm-sample-unit-tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ios-rx-mvvm-sample.app/ios-rx-mvvm-sample";
+			};
+			name = Debug;
+		};
+		477D7DDD2539A3530062E489 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 949577ZGT6;
+				INFOPLIST_FILE = "ios-rx-mvvm-sample-unit-tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "seungminbae.ios-rx-mvvm-sample-unit-tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ios-rx-mvvm-sample.app/ios-rx-mvvm-sample";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -575,6 +697,15 @@
 			buildConfigurations = (
 				47483E3C24DBFB5500A60789 /* Debug */,
 				47483E3D24DBFB5500A60789 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		477D7DDE2539A3530062E489 /* Build configuration list for PBXNativeTarget "ios-rx-mvvm-sample-unit-tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				477D7DDC2539A3530062E489 /* Debug */,
+				477D7DDD2539A3530062E489 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
