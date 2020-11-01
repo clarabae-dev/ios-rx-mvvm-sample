@@ -10,8 +10,8 @@ import Foundation
 
 final class DefaultWeatherRepository: WeatherRepository {
     
-    private let localDataSource: LocalWeatherDataSource
-    private let remoteDataSource: RemoteWeatherDataSource
+    private let localDataSource: WeatherDataSource
+    private let remoteDataSource: WeatherDataSource
     
     init() {
         self.localDataSource = LocalWeatherDataSource()
